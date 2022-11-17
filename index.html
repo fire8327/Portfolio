@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <script src="Assets/JS/wow.min.js"></script>
     <script>new WOW().init();</script>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
 </head>
 <body class="bg-bgc">
     <header class="bg-bg h-28 md:h-20 p-2 text-slate-400">
@@ -50,6 +51,44 @@
         </div>
     </header>
 
+
+    <div class="container mx-auto p-2 mt-12 text-white">
+        <p id="typeit" class="text-3xl h-20 mb-8"></p>
+        <a href="" class="rounded-2xl border border-white p-3 hover:delay-200 transition-all duration-500 hover:text-bgc hover:bg-white">
+            Узнать больше
+        </a>
+    </div>
+
+    <div class="container mx-auto mt-12 p-2 text-white ">
+        <p class="text-3xl fadeInLeft wow">Время делать проекты!</p>
+        <div class="flex flex-col items-center text-4xl">
+        <div class="text-slate-300 flex items-center justify-center mt-8">
+            <div class="flex text-center items-center justify-center border-4 border-purple-700 rounded-full p-2 w-20 h-20 md:w-40 md:h-40 mx-2 animate-pulse">
+                <div id="clock1"></div>            
+            </div>
+            <p>:</p>
+            <div class="flex text-center items-center justify-center border-4 border-purple-700 rounded-full p-2 w-20 h-20 md:w-40 md:h-40 mx-2 animate-pulse">
+                <div id="clock2"></div>            
+            </div>
+            <p>:</p>
+            <div class="flex text-center items-center justify-center border-4 border-purple-700 rounded-full p-2 w-20 h-20 md:w-40 md:h-40 mx-2 animate-pulse">
+                <div id="clock3"></div>            
+            </div>
+        </div>
+        <div class="flex text-center items-center justify-center border-4 border-purple-700 rounded-3xl p-4 h-30 mt-8 animate-pulse">
+            <div id="clock4"></div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="container mx-auto p-2 mt-12 text-white mt-12">
+        <p class="text-3xl fadeInLeft wow">Примеры работ</p>
+        <div class="w-full mx-auto">
+            <a href=""><img src="Assets/img/examples/Estate.png" alt="" class="mt-8 rounded-2xl"></a>
+            <a href=""><img src="Assets/img/examples/KP.png" alt="" class="mt-8 rounded-2xl"></a>
+            <a href=""><img src="Assets/img/examples/Moon.png" alt="" class="mt-8 rounded-2xl"></a>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
     <script src="Assets/JS/custom.js"></script>
