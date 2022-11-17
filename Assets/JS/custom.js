@@ -19,3 +19,15 @@ overlay.addEventListener("click", () => {
   mNav.classList.add("translate-x-full");
   overlay.classList.add("hidden"); 
 });
+
+/* theme */
+const html = document.documentElement;
+const dark_toggle = document.getElementById("dark_toggle");
+function dark() {
+  if (dark_toggle.checked) {
+    html.classList.add("dark");
+  }
+  else {
+    html.classList.remove("dark");
+  }
+}
