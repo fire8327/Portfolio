@@ -21,6 +21,24 @@ overlay.addEventListener("click", () => {
 });
 
 
+/* Atropos */
+const myAtropos = Atropos({
+  el: '.my-atropos',
+  shadow:false,
+  activeOffset: 40,
+});
+const myAtropos2 = Atropos({
+  el: '.my-atropos2',
+  shadow:false,
+  activeOffset: 40,
+});
+const myAtropos3 = Atropos({
+  el: '.my-atropos3',
+  shadow:false,
+  activeOffset: 40,
+});
+
+
 /* Time */
 function currentTime() {
   var date = new Date();

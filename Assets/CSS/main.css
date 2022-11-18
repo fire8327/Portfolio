@@ -1,4 +1,6 @@
 @import url(animate.css);
+@import url(atropos.min.css);
+@import url(gradient.scss);
 
 body {
     font-family: 'Roboto', sans-serif;
