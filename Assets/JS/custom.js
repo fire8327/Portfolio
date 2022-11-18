@@ -65,7 +65,7 @@ var n = weekday[d.getDay()];
   document.getElementById("clock2").innerText = min;
   document.getElementById("clock3").innerText = sec;
   document.getElementById("clock4").innerText =day+"."+m+"."+y+"\n"+n;
-    var t = setTimeout(function(){ currentTime() }, 1000);
+    var t = setTimeout(function(){ currentTime(); }, 1000);
 }
 function updateTime(k) {
   if (k < 10) {
