@@ -32,11 +32,6 @@ const myAtropos2 = Atropos({
   shadow:false,
   activeOffset: 40,
 });
-const myAtropos3 = Atropos({
-  el: '.my-atropos3',
-  shadow:false,
-  activeOffset: 40,
-});
 
 
 /* Time */
