@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная страница</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="Assets/CSS/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +37,7 @@
         </div>    
         <div class="w-full flex">
             <div id="mobile__nav" class="fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 bg-bgc text-slate-400 transform translate-x-full transition duration-300 ease-in-out z-30">
-                <svg id="toggler__expanded" class="text-white w-6 h-6 absolute top-4 left-4 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg id="toggler__expanded" class="text-white w-6 h-6 left-0 top-4 left-4 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
                 <div class="flex flex-col">
@@ -84,7 +85,7 @@
     
     <div class="container mx-auto p-2 mt-12 text-white mt-12">
         <p class="text-3xl fadeInLeft wow">Примеры работ</p>
-        <div class="atropos my-atropos w-full lg:w-9/12 mx-auto mt-8 rounded-2xl">
+        <div class="atropos my-atropos w-full mx-auto mt-8 rounded-2xl">
             <div class="atropos-scale rounded-2xl">
                 <div class="atropos-rotate rounded-2xl">
                     <div class="atropos-inner rounded-2xl">
@@ -93,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="atropos my-atropos2 w-full lg:w-9/12 mx-auto mt-8 rounded-2xl">
+        <div class="atropos my-atropos2 w-full mx-auto mt-8 rounded-2xl">
             <div class="atropos-scale rounded-2xl">
                 <div class="atropos-rotate rounded-2xl">
                     <div class="atropos-inner rounded-2xl">
@@ -102,13 +103,59 @@
                 </div>
             </div>
         </div>
-        <a href="" class="flex w-full mt-8 lg:w-9/12 justify-end mx-auto">
+        <a href="" class="flex w-full mt-8 justify-end mx-auto">
             <div class="w-40 rounded-2xl border border-white p-3 hover:delay-200 transition-all duration-500 hover:text-bgc hover:bg-white animate-bounce">Посмотреть ещё</div> 
         </a>
     </div>
 
     <div class="container mx-auto p-2 mt-12 text-white mt-12">
         <p class="text-3xl fadeInLeft wow">Были бы идеи...</p>
+        <div class="w-full flex flex-col md:flex-row">
+            <div class="h-48 md:h-auto w-full md:w-1/2 [perspective:1000px] mt-8">
+                <div class="relative h-full w-full rounded-xl transition-all duration-700 [transform-style:preserve-3d] " id="flip">
+                    <div class="left-0 inset-0 h-full-w-full flex flex-col md:items-center justify-center" id="block1">
+                        <div class="w-full md:w-96">
+                            <p class="py-1">Возможно вам понравилось то, что вы увидели.</p>
+                            <p class="pt-1 pb-6">Если у вас есть идея или проект, который вы бы хотели реализовать, то напишите мне.</p>
+                            <button id="flip_toggler" class="w-44 rounded-2xl border border-white p-3 hover:delay-200 transition-all duration-500 hover:text-bgc hover:bg-white animate-bounce">Связаться со мной</button>                    
+                        </div>    
+                    </div>
+                    <div class="left-0 inset-0 h-full-w-full rounded-xl [transform:rotateY(180deg)] hidden flex flex-col md:items-center justify-center" id="block2">
+                        <div class="w-full md:w-96">
+                            <p class="py-1">Вы можете написать мне в телеграм.</p>
+                            <div class="py-1">Для этого перейдите по ссылке <a href="https://t.me/fire83274" class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">*клик*</a></div>
+                            <p class="py-1">Или введите в поиск <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">@fire83274</span></p>
+                            <button id="flip_close"><img src="Assets/img/contact/Arrow.svg" class="w-10 mt-8 animate-bounce" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <svg class="w-56 md:w-64" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve">
+                <circle style="fill:#273B7A;" cx="256.001" cy="256" r="256"/>
+                <path style="fill:#121149;" d="M170.778,387.355l-54.72,5.354L234.438,511.09c7.111,0.593,14.3,0.912,21.563,0.912
+                    c125.805,0,230.412-90.75,251.938-210.356L318.277,111.876l-131.124,79.872l3.724,3.724l-54.974,39.267l1.083,46.545
+                    L170.778,387.355z"/>
+                <polygon style="fill:#38C6D9;" points="171.585,395.354 118.19,235.168 251.61,128.433 264.203,144.174 141.758,242.128 
+                    190.71,388.98 "/>
+                <polygon class="fill-slate-400 transition-all duration-700" id="lamp1" points="455.112,398.222 256.001,398.222 256.001,227.556 350.29,198.408 "/>
+                <polygon class="fill-slate-400 transition-all duration-700" id="lamp2" points="350.29,198.408 307.035,211.78 365.593,398.222 455.112,398.222 "/>
+                <circle style="fill:#D0D1D3;" cx="287.324" cy="142.446" r="43.494"/>
+                <path style="fill:#D0D1D3;" d="M299.367,184.227c23.078-6.649,36.399-30.748,29.749-53.827
+                    c-6.649-23.08-30.748-36.399-53.827-29.749c-0.972,0.281-1.922,0.603-2.86,0.943l26.028,82.87
+                    C298.761,184.384,299.064,184.315,299.367,184.227z"/>
+                <polygon style="fill:#FFFFFF;" points="374.088,207.956 248.724,244.072 245.54,154.477 329.117,130.4 "/>
+                <polygon style="fill:#FFFFFF;" points="374.088,207.956 329.117,130.4 285.43,142.986 311.499,225.989 "/>
+                <g>
+                    <circle style="fill:#386895;" cx="133.845" cy="238.64" r="20.935"/>
+                    <path style="fill:#386895;" d="M228.917,398.222H126.572c-7.066,0-12.793-5.729-12.793-12.793l0,0
+                        c0-7.066,5.729-12.793,12.793-12.793h102.345c7.066,0,12.793,5.729,12.793,12.793l0,0
+                        C241.711,392.494,235.983,398.222,228.917,398.222z"/>
+                </g>
+                </svg>
+            </div>
+        </div>
     </div>
 
 

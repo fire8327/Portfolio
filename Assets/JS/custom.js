@@ -33,6 +33,36 @@ const myAtropos2 = Atropos({
   activeOffset: 40,
 });
 
+/* Card flip and Lamp*/
+const flip = document.getElementById("flip");
+const block1 = document.getElementById("block1");
+const block2 = document.getElementById("block2");
+const flip_toggler = document.getElementById("flip_toggler");
+const flip_close = document.getElementById("flip_close");
+
+const lamp1 = document.getElementById("lamp1");
+const lamp2 = document.getElementById("lamp2");
+
+flip_toggler.addEventListener("click", () => {
+  flip.classList.add("[transform:rotateY(180deg)]");
+  setTimeout(() => block2.classList.remove("hidden"), 200);
+  setTimeout(() => block1.classList.add("hidden"), 200);
+  lamp1.classList.remove("fill-slate-400");
+  lamp2.classList.remove("fill-slate-400");
+  lamp1.classList.add("fill-yellow-400");
+  lamp2.classList.add("fill-yellow-400");
+  
+});
+flip_close.addEventListener("click", () => {
+  flip.classList.remove("[transform:rotateY(180deg)]");
+  setTimeout(() => block2.classList.add("hidden"), 200);
+  setTimeout(() => block1.classList.remove("hidden"), 200);
+  lamp1.classList.add("fill-slate-400");
+  lamp2.classList.add("fill-slate-400");
+  lamp1.classList.remove("fill-yellow-400");
+  lamp2.classList.remove("fill-yellow-400");
+});
+
 
 /* Time */
 function currentTime() {
