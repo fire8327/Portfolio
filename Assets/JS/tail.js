@@ -14,7 +14,7 @@ tailwind.config = {
             '2xl': '1536px',
           }
     },
-  };
+};
 
 
   

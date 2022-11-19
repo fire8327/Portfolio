@@ -6,6 +6,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#theme, #toggler {
+.tap {
     -webkit-tap-highlight-color: transparent;
 }
