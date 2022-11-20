@@ -3,6 +3,7 @@ tailwind.config = {
       extend: {
         colors: {            
             'bgc': '#12121C',
+            'footer': '#222233'
           },
         },
           screens: {
