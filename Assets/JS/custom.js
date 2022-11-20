@@ -30,11 +30,25 @@ const myAtropos = Atropos({
   el: '.my-atropos',
   shadow:false,
   activeOffset: 40,
+  rotate:true,
+  rotateTouch:('scroll-y'),  
+  highlight:false
 });
 const myAtropos2 = Atropos({
   el: '.my-atropos2',
   shadow:false,
   activeOffset: 40,
+  rotateTouch:('scroll-y'),  
+  highlight:false
+});
+
+
+const myAtropos5 = Atropos({
+  el: '.my-atropos5',
+  shadow:false,
+  activeOffset: 40,
+  rotateTouch:('scroll-y'), 
+  highlight:false
 });
 
 /* Card flip and Lamp*/
