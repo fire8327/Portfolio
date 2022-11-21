@@ -15,44 +15,22 @@ a {
 }
 
 
-body::-webkit-scrollbar { /* 1 - скроллбар */
+body::-webkit-scrollbar { /* скроллбар */
   width: 8px;
   background-color: #FFFFFF;
 }
 
-body::-webkit-scrollbar-button { /* 2 - кнопка */
+body::-webkit-scrollbar-button { /* кнопка */
   width: 0;
   height: 0;
 }
 
 body::-webkit-scrollbar-track {
-  background: #12121C; /* 3 - трек */
+  background: #12121C; /* трек */
 }
 
-body::-webkit-scrollbar-thumb { /* 5 - ползунок */
+body::-webkit-scrollbar-thumb { /* ползунок */
   border-radius: 2px;
   background: rgb(239,68,68);
   background: linear-gradient(360deg, rgba(239,68,68,1) 0%, rgba(236,72,153,1) 50%, rgba(234,179,8,1) 100%);
 }
-
-@media (pointer: fine)  {
-	body::-webkit-scrollbar { /* 1 - скроллбар */
-    width: 8px;
-    background-color: #FFFFFF;
-  }
-  
-  body::-webkit-scrollbar-button { /* 2 - кнопка */
-    width: 0;
-    height: 0;
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #12121C; /* 3 - трек */
-  }
-  
-  body::-webkit-scrollbar-thumb { /* 5 - ползунок */
-    border-radius: 2px;
-    background: rgb(239,68,68);
-    background: linear-gradient(360deg, rgba(239,68,68,1) 0%, rgba(236,72,153,1) 50%, rgba(234,179,8,1) 100%);
-  }
-  }
