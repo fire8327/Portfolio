@@ -41,8 +41,20 @@ const myAtropos2 = Atropos({
   rotateTouch:('scroll-y'),  
   highlight:false
 });
-
-
+const myAtropos3 = Atropos({
+  el: '.my-atropos3',
+  shadow:false,
+  activeOffset: 40,
+  rotateTouch:('scroll-y'),  
+  highlight:false
+});
+const myAtropos4 = Atropos({
+  el: '.my-atropos4',
+  shadow:false,
+  activeOffset: 40,
+  rotateTouch:('scroll-y'),  
+  highlight:false
+});
 const myAtropos5 = Atropos({
   el: '.my-atropos5',
   shadow:false,
