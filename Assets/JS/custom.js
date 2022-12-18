@@ -46,35 +46,45 @@ const myAtropos = Atropos({
   activeOffset: 40,
   rotate:true,
   rotateTouch:('scroll-y'),  
-  highlight:false
+  highlight:false,
+  rotateXMax:7,
+  rotateYMax:7,
 });
 const myAtropos2 = Atropos({
   el: '.my-atropos2',
   shadow:false,
   activeOffset: 40,
   rotateTouch:('scroll-y'),  
-  highlight:false
+  highlight:false,
+  rotateXMax:7,
+  rotateYMax:7,
 });
 const myAtropos3 = Atropos({
   el: '.my-atropos3',
   shadow:false,
   activeOffset: 40,
   rotateTouch:('scroll-y'),  
-  highlight:false
+  highlight:false,
+  rotateXMax:7,
+  rotateYMax:7,
 });
 const myAtropos4 = Atropos({
   el: '.my-atropos4',
   shadow:false,
   activeOffset: 40,
   rotateTouch:('scroll-y'),  
-  highlight:false
+  highlight:false,
+  rotateXMax:7,
+  rotateYMax:7,
 });
 const myAtropos5 = Atropos({
   el: '.my-atropos5',
   shadow:false,
   activeOffset: 40,
   rotateTouch:('scroll-y'), 
-  highlight:false
+  highlight:false,
+  rotateXMax:7,
+  rotateYMax:7,
 });
 
 /* Card flip and Lamp*/
