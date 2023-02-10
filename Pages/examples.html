@@ -14,7 +14,7 @@
     <script>new WOW().init();</script>
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
 </head>
-<body class="bg-bgc">
+<body class="bg-[#12121C]">
     <header class="h-28 md:h-20 p-2 text-slate-400">
         <div class="flex justify-between container mx-auto items-center w-full">
             <div class="flex items-center">
@@ -22,10 +22,10 @@
             </div>
             <div class="flex">
                 <div class="hidden lg:flex">
-                    <a href="../index.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Главная</a>
+                    <a href="../index.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Главная</a>
                     <a href="#" class="mx-4 border-b text-white">Примеры работ</a>
-                    <a href="about.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Обо мне</a>
-                    <a href="cloud.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Облако</a>
+                    <a href="about.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Обо мне</a>
+                    <a href="cloud.html" class="mx-4 hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Облако</a>
                 </div>
                 <div class="flex">
                     <button class="border border-white rounded-2xl lg:hidden tap" id="toggler">
@@ -35,15 +35,15 @@
             </div>
         </div>    
         <div class="w-full flex">
-            <div id="mobile__nav" class="fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 bg-bgc text-slate-400 transform translate-x-full transition duration-300 ease-in-out z-30">
+            <div id="mobile__nav" class="fixed top-0 right-0 flex flex-col h-screen w-full md:w-1/2 pt-12 bg-[#12121C] text-slate-400 transform translate-x-full transition duration-300 ease-in-out z-30">
                 <svg id="toggler__expanded" class="text-white w-6 h-6 top-4 left-4 cursor-pointer ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
                 <div class="flex flex-col justify-center h-full">
-                    <a href="../index.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Главная</a>
+                    <a href="../index.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Главная</a>
                     <a href="#" class="m-4 p-0 w-auto border-b text-white">Примеры работ</a>
-                    <a href="about.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Обо мне</a>
-                    <a href="cloud.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-bgc hover:text-white hover:border-white">Облако</a>
+                    <a href="about.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Обо мне</a>
+                    <a href="cloud.html" class="m-4 p-0 w-auto hover:delay-200 transition-all duration-500 border-b border-[#12121C] hover:text-white hover:border-white">Облако</a>
                     <div class="w-72 flex justify-center mt-16 p-4 self-center">
                         <svg id="bongo-cat" class="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 787.3 433.8">
                             <defs>
@@ -180,7 +180,7 @@
       <p class="text-3xl fadeInLeft wow text-white">Примеры работ</p>
       <p class="mt-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-fit">(можешь кликнуть по картинке и перейти на страницу проекта)</p>
       <div class="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-8">
-        <div class="rounded-xl shadow bg-footer">
+        <div class="rounded-xl shadow bg-[#222233]">
           <div class="atropos my-atropos group">
             <div class="atropos-scale">
                 <div class="atropos-rotate">
@@ -195,9 +195,9 @@
                   <h5 class="mb-2 text-2xl font-semibold text-white">Сайт</h5>
               </a>
               <div class="flex gap-2">
-                <span class="bg-white rounded-full px-3 py-1 text-sm font-semibold">#ru</span>
-                <span class="bg-white rounded-full px-3 py-1 text-sm font-semibold">#landing</span>
-                <span class="bg-white rounded-full px-3 py-1 text-sm font-semibold">#white_theme</span>
+                <span class="bg-white rounded-full px-3 py-1 text-sm">#ru</span>
+                <span class="bg-white rounded-full px-3 py-1 text-sm">#landing</span>
+                <span class="bg-white rounded-full px-3 py-1 text-sm">#white_theme</span>
               </div>
           </div>
         </div>
@@ -269,11 +269,7 @@
       </ol> 
     </div>
 
-    <!-- <div class="container mx-auto mt-12 p-2 text-white ">
-      <p class="text-3xl fadeInLeft wow">Время проектов!</p>
-    </div> -->
-
-    <footer class="mt-12 flex flex-col bg-footer">   
+    <footer class="mt-12 flex flex-col bg-[#222233]">   
         <div class="h-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-full rounded-full"></div>     
         <div class="container mx-auto px-2">
             <div class="flex flex-col md:flex-row justify-between items-center text-slate-400 mt-4">
@@ -300,7 +296,7 @@
                         </a>
                     </div>
                 </div>
-                <p class="text-white py-5">© 2022 Copyright: <a href="https://t.me/fire83274" target="_blank" class="text-slate-400 border-b hover:delay-200 transition-all duration-500 border-slate-400 text-slate-400 hover:border-white hover:text-white">fire83274</a></p>
+                <p class="text-white py-5">© 2022 Copyright: <a href="https://t.me/fire83274" target="_blank" class="text-slate-400 border-b hover:delay-200 transition-all duration-500 border-slate-400 hover:border-white hover:text-white">fire83274</a></p>
             </div>            
         </div>
     </footer>
@@ -314,6 +310,5 @@
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>    
     <script src="../Assets/JS/atropos.min.js"></script>
     <script src="../Assets/JS/custom.js"></script>
-    <script src="../Assets/JS/tail.js"></script>
 </body>
 </html>

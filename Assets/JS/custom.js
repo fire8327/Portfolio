@@ -101,8 +101,6 @@ flip_toggler.addEventListener("click", () => {
   flip.classList.add("[transform:rotateY(180deg)]");
   setTimeout(() => block2.classList.remove("hidden"), 200);
   setTimeout(() => block1.classList.add("hidden"), 200);
-  lamp1.classList.remove("fill-slate-400");
-  lamp2.classList.remove("fill-slate-400");
   lamp1.classList.add("fill-yellow-400");
   lamp2.classList.add("fill-yellow-400");
   
@@ -111,8 +109,6 @@ flip_close.addEventListener("click", () => {
   flip.classList.remove("[transform:rotateY(180deg)]");
   setTimeout(() => block2.classList.add("hidden"), 200);
   setTimeout(() => block1.classList.remove("hidden"), 200);
-  lamp1.classList.add("fill-slate-400");
-  lamp2.classList.add("fill-slate-400");
   lamp1.classList.remove("fill-yellow-400");
   lamp2.classList.remove("fill-yellow-400");
 });
