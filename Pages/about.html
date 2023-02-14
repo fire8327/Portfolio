@@ -256,7 +256,7 @@
     <div class="container mx-auto mt-12 px-4 text-white ">
       <p class="text-3xl fadeInLeft wow">Хобби</p>
       <p class="mt-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 w-fit">(можешь навестить на картинку)</p>
-      <div class="w-full mt-6 flex justify-between">
+      <div class="w-full mt-6 flex justify-between relative">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 w-full lg:w-1/3 xl:w-1/4 h-fit">
           <div class="rounded-xl bg-[#222233] flex gap-8 px-3 py-2 items-center justify-center border border-gray-300 border-opacity-20" id="hobby1">
             <img src="../Assets/img/hobby/book.png" alt="" class="rounded-xl w-20">
@@ -276,20 +276,50 @@
           </div>
         </div>
         <div class="grow lg:-mx-1 xl:-mx-2 z-30 relative">
-          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow1" class="w-full transition-all duration-500 absolute lg:top-[29px] 2xl:top-0 xl:top-[15px]">
-          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow2" class="w-full transition-all duration-500 absolute lg:top-[139px] 2xl:top-[115px] xl:top-[125px]">
-          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow3" class="w-full transition-all duration-500 absolute lg:top-[255px] 2xl:top-[230px] xl:top-[235px]">
-          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow4" class="w-full transition-all duration-500 absolute lg:top-[365px] 2xl:top-[340px] xl:top-[345px]">
+          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow1" class="w-full opacity-0 transition-all duration-[375ms] absolute lg:top-[29px] 2xl:top-0 xl:top-[15px]">
+          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow2" class="w-full opacity-0 transition-all duration-[375ms] absolute lg:top-[139px] 2xl:top-[115px] xl:top-[125px]">
+          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow3" class="w-full opacity-0 transition-all duration-[375ms] absolute lg:top-[255px] 2xl:top-[230px] xl:top-[235px]">
+          <img src="../Assets/img/hobby/arrow.svg" alt="" id="arrow4" class="w-full opacity-0 transition-all duration-[375ms] absolute lg:top-[365px] 2xl:top-[340px] xl:top-[345px]">
         </div>
-        <div class="flex flex-col lg:w-1/3 xl:w-1/4 relative">
-          <div class="w-full h-full rounded-xl bg-[#222233] px-2 py-3 flex flex-col gap-6 absolute top-0 left-0 transition-all duration-500" id="list1">
+        <div class="flex flex-col w-full lg:w-1/3 xl:w-1/4 absolute z-30 lg:relative">
+          <div class="w-full h-full rounded-xl bg-[#222233] px-2 py-3 flex flex-col gap-6 absolute top-0 left-0 transition-all duration-700 opacity-0" id="list1">
             <p class="text-xl text-white text-center">Подборка книг:</p>
             <ul class="flex flex-col gap-4 items-center list-decimal list-inside">
-              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl">Книга1</li>
-              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl">Книга2</li>
-              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl">Книга3</li>
-              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl">Книга4</li>
-              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl">Книга5</li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Книга1</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Книга2</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Книга3</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Книга4</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Книга5</a></li>
+            </ul>
+          </div>
+          <div class="w-full h-full rounded-xl bg-[#222233] px-2 py-3 flex flex-col gap-6 absolute top-0 left-0 transition-all duration-700 opacity-0" id="list2">
+            <p class="text-xl text-white text-center">Подборка сайтов:</p>
+            <ul class="flex flex-col gap-4 items-center list-decimal list-inside">
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Сайт1</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Сайт2</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Сайт3</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Сайт4</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Сайт5</a></li>
+            </ul>
+          </div>
+          <div class="w-full h-full rounded-xl bg-[#222233] px-2 py-3 flex flex-col gap-6 absolute top-0 left-0 transition-all duration-700 opacity-0" id="list3">
+            <p class="text-xl text-white text-center">Подборка музыки:</p>
+            <ul class="flex flex-col gap-4 items-center list-decimal list-inside">
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Музыква1</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Музыква2</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Музыква3</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Музыква4</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Музыква5</a></li>
+            </ul>
+          </div>
+          <div class="w-full h-full rounded-xl bg-[#222233] px-2 py-3 flex flex-col gap-6 absolute top-0 left-0 transition-all duration-700 opacity-0" id="list4">
+            <p class="text-xl text-white text-center">Подборка игр:</p>
+            <ul class="flex flex-col gap-4 items-center list-decimal list-inside">
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Игра1</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Игра2</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Игра3</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Игра4</a></li>
+              <li class="text-white bg-slate-700 border border-gray-300 border-opacity-20 py-3 px-2 rounded-xl"><a href="">Игра5</a></li>
             </ul>
           </div>
         </div>
@@ -362,5 +392,9 @@
     <script src="../Assets/JS/atropos.min.js"></script>
     <script src="../Assets/JS/custom.js"></script>
     <script src="../Assets/JS/tail.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+    crossorigin="anonymous"></script>
+    <script src="../Assets/JS/hobby.js"></script>
 </body>
 </html>
