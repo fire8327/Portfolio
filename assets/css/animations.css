@@ -1,0 +1,10 @@
+@keyframes background-pan {
+    from { background-position: 0% center; }
+    to { background-position: -200% center; }
+  }
+  
+  @keyframes scroll-down {
+    0% { transform: translateY(-150%); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(150%); }
+  }
