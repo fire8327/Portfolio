@@ -26,9 +26,6 @@ module.exports = {
           'widthContent': '1280px',
           'widthContentMargin': '16px'
         },
-        fontFamily: {
-          Inter: ['Inter', 'sans-serif']
-        },
         backgroundImage: {
           'gradient-brand': 'linear-gradient(to right, #ec4899, #8b5cf6)'
         }
