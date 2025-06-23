@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
     #__nuxt{
         @apply flex flex-col min-h-screen bg-[#f9f9f9] text-[#131313] font-medium text-lg

@@ -1,7 +1,5 @@
 <template>
-    <div>
-        123
-    </div>
+    <p class="text-black dark:text-red-400">123</p>
 </template>
 
 <script setup>

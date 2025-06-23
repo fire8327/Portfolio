@@ -5,7 +5,7 @@
                 <img src="/images/header/logo.webp" alt="" class="rounded-full w-14">
             </NuxtLink>
             <div class="flex items-center gap-6">
-                <button class="cursor-pointer rounded-full text-xl flex items-center justify-center p-2 bg-black border border-white/20 text-white">
+                <button @click="isDark = !isDark" class="cursor-pointer rounded-full text-xl flex items-center justify-center p-2 bg-black border border-white/20 text-white">
                     <Icon :name="isDark ? 'ph:sun-dim' : 'material-symbols:dark-mode-outline-rounded'"/>
                 </button>
                 <button @click="isMenuShow = !isMenuShow" class="cursor-pointer flex flex-col justify-between w-[26px] transition-[height] ease-linear duration-100" :class="isMenuShow ? 'h-5' : 'h-3.5'">
@@ -42,6 +42,13 @@
 <script setup>
 /* переключение темы */
 const isDark = ref(false)
+
+watch(isDark, (newVal) => {
+    if (process.client) {
+        const html = document.documentElement
+        html.classList.toggle('dark', newVal)
+  }
+}, { immediate: true })
 
 
 /* мобильное меню */
