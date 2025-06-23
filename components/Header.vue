@@ -15,7 +15,7 @@
                 </button>
             </div>
         </div>
-        <div class="fixed inset-0 bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-[#f9f9f9] dark:bg-[#131313] bg-fixed grid-container transition-all duration-500 z-[3]" :class="{'-translate-y-full' : !isMenuShow}">
+        <div class="fixed inset-0 bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-[#f9f9f9] dark:bg-[#131313] bg-fixed grid-container transition-all duration-500 z-[3]" :class="{'-translate-y-[3000px]' : !isMenuShow}">
             <div class="flex max-lg:flex-col gap-6 items-center py-20 z-[2]">
                 <ul class="w-full lg:w-3/5 xl:w-[65%] flex flex-col max-lg:items-center h-full justify-center gap-8 md:gap-12 lg:gap-16 list-inside lg:list-decimal marker:text-base marker:text-[#131313]/30 dark:marker:text-[#f9f9f9]/30 text-2xl md:text-3xl lg:text-4xl">
                     <li class="mainLink w-fit"><NuxtLink to="/">Главная</NuxtLink></li>
