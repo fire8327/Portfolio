@@ -4,7 +4,7 @@
 
 @layer base {
     #__nuxt{
-        @apply flex flex-col min-h-screen bg-[#f9f9f9] dark:bg-[#131313] text-[#131313] dark:text-[#f9f9f9] bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-fixed font-medium text-lg
+        @apply flex flex-col min-h-screen transition-all duration-500 bg-[#f9f9f9] dark:bg-[#131313] text-[#131313] dark:text-[#f9f9f9] bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-fixed font-medium text-lg
     }
         
     :root{
@@ -44,9 +44,9 @@
 }
 
 :root {  
-    --purple: rgb(123, 31, 162);
-    --violet: rgb(103, 58, 183);
-    --pink: rgb(244, 143, 177);
+    --purple: #7b1fa2;
+    --violet: #673ab7;
+    --pink: #f48fb1;
     }
 
 @keyframes background-pan {
@@ -69,6 +69,5 @@
         var(--pink)
     );
     background-size: 200%;
-    -webkit-text-fill-color: transparent;
     white-space: nowrap;
 }
