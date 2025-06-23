@@ -2,7 +2,7 @@
 
 @layer base {
     #__nuxt{
-        @apply flex flex-col min-h-screen bg-gray-100 text-[#141414]/80 font-medium text-lg
+        @apply flex flex-col min-h-screen bg-[#f9f9f9] text-[#131313] font-medium text-lg
     }
         
     :root{
@@ -35,4 +35,38 @@
 
 .mainHeading {
     @apply text-2xl text-[#131313] font-semibold font-mono tracking-wider
+}
+
+.mainLink {
+    @apply transition-all duration-500 hover:scale-110
+}
+
+:root {  
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+    }
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.mainAnimateText {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--pink),
+        var(--purple),
+        var(--violet),
+        var(--pink)
+    );
+    background-size: 200%;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
