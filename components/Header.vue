@@ -1,5 +1,5 @@
 <template>
-    <header class="w-full grid-container py-2">
+    <header class="w-full grid-container py-2 relative">
         <div class="flex items-center justify-between z-[4]">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="" class="rounded-full w-14">
@@ -15,7 +15,7 @@
                 </button>
             </div>
         </div>
-        <div class="fixed inset-0 bg-[url(/images/body/bg_white.webp)] bg-[#f9f9f9] bg-fixed grid-container transition-all duration-500 z-[3]">
+        <div class="fixed inset-0 bg-[url(/images/body/bg_white.webp)] bg-[#f9f9f9] bg-fixed grid-container transition-all duration-500 z-[3]" :class="{'-translate-y-full' : !isMenuShow}">
             <div class="flex max-lg:flex-col gap-6 items-center py-20 z-[2]">
                 <ul class="w-full lg:1/2 xl:w-[65%] flex flex-col max-lg:items-center h-full justify-center gap-8 md:gap-12 lg:gap-16 list-inside lg:list-decimal marker:text-base marker:text-[#131313]/30 text-2xl md:text-3xl lg:text-4xl">
                     <li class="mainLink w-fit"><NuxtLink to="/">Главная</NuxtLink></li>
@@ -28,8 +28,8 @@
                     <div class="flex flex-col gap-6">
                         <p class="text-transparent !bg-clip-text mainAnimateText text-xl">Контакты</p>
                         <div class="flex items-center gap-4">
-                            <NuxtLink to="https://t.me/fire83274" target="_blank" class="link">Telegram.</NuxtLink>
-                            <NuxtLink to="https://github.com/fire8327" target="_blank" class="link">GitHub.</NuxtLink>
+                            <NuxtLink to="https://t.me/fire83274" target="_blank" class="mainLink">Telegram.</NuxtLink>
+                            <NuxtLink to="https://github.com/fire8327" target="_blank" class="mainLink">GitHub.</NuxtLink>
                         </div>
                     </div>
                 </div>
