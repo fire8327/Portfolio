@@ -2,9 +2,9 @@
     <header ref="headerRef" class="grid-container w-full py-2 transition-all duration-500 z-[5] transform-gpu"
         :class="{
             'fixed top-0 left-0': isHeaderSticky,
-            '-translate-y-full': !isHeaderVisible,
+            '-translate-y-[calc(100%+5px)]': !isHeaderVisible,
             'translate-y-0': isHeaderVisible,
-            'bg-[#f9f9f9] dark:bg-[#131313] backdrop-blur-md shadow-md': isHeaderSticky,
+            'bg-[#f9f9f9] dark:bg-[#131313] backdrop-blur-md shadow-xs shadow-[#131313]/40 dark:shadow-[#f9f9f9]/40': isHeaderSticky,
             'bg-transparent': !isHeaderSticky
         }">
         <div class="flex items-center justify-between z-[4]">
