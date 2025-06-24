@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@nuxt/icon": "^1.14.0",
-    "@nuxtjs/tailwindcss": "^7.0.0-beta.0"
+    "@nuxtjs/tailwindcss": "^7.0.0-beta.0",
+    "@vueuse/nuxt": "^13.4.0"
   }
 }
