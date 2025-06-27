@@ -71,3 +71,8 @@
     background-size: 200%;
     white-space: nowrap;
 }
+
+.mainVerticalText {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}

@@ -1,7 +1,9 @@
 <template>
     <div class="flex flex-col items-center gap-6 lg:gap-8">
         <p class="text-2xl md:text-3xl lg:text-4xl uppercase text-center">Варианты сотрудничества</p>
-        <p class="text-sm uppercase text-[#131313]/60 dark:text-[#f9f9f9]/60 text-center">Здесь вы можете ознакомиться с предоставляемыми услугами.</p>
+        <p class="text-sm uppercase text-[#131313]/60 dark:text-[#f9f9f9]/60 text-center">
+            Здесь вы можете ознакомиться с предоставляемыми услугами.
+        </p>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full">
             <div class="relative p-4 border border-[#131313]/60 dark:border-[#f9f9f9]/60 flex flex-col gap-4 text-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1 cursor-pointer">
                 <p class="absolute top-6 right-6 text-4xl z-0 text-[#EDBC5A]">01</p>
