@@ -59,6 +59,21 @@
     }
 }
 
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-150%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(150%);
+    }
+
+}
+
 .mainAnimateText {
     animation: background-pan 5s linear infinite;
     background: linear-gradient(
@@ -70,6 +85,10 @@
     );
     background-size: 200%;
     white-space: nowrap;
+}
+
+.mainScroll {
+    animation: scroll-down 3s infinite;
 }
 
 .mainVerticalText {
