@@ -7,8 +7,8 @@
             <img src="/images/about/2.webp" alt="about-2" class="rotate-6 w-full">
         </div>
     </div>
+    <CoopOptions/>
     <NewProject/>
-    
 </template>
 
 <script setup>
