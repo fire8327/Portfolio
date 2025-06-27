@@ -6,7 +6,7 @@
         <NuxtLink class="link" to="https://github.com/fire8327" target="_blank">
             <Icon name="mdi:github"/>
         </NuxtLink>
-        <div class="w-px h-12 bg-[#f9f9f9]"></div>
+        <div class="w-px h-12 bg-[#EDBC5A]/80 animate-pulse"></div>
         <p class="text-sm mainVerticalText tracking-[0.4em]">FOLLOW</p>
     </div>
 </template>
