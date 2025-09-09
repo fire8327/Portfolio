@@ -95,3 +95,9 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
 }
+
+
+/* Фиксированная ширина для предотвращения дёргания при скрытии скролла */
+html {
+    scrollbar-gutter: stable;
+}
