@@ -1,13 +1,13 @@
 <template>
-    <header ref="headerRef" class="grid-container w-full py-2 transition-all duration-500 z-[5] transform-gpu"
+    <header ref="headerRef" class="fixed top-0 left-0 w-full py-2 transition-all duration-500 z-[5] transform-gpu"
         :class="{
-            'fixed top-0 left-0': isHeaderSticky,
             '-translate-y-[calc(100%+5px)]': !isHeaderVisible,
             'translate-y-0': isHeaderVisible,
             'bg-[#f9f9f9] dark:bg-[#131313] backdrop-blur-md shadow-[0px_0px_20px_-5px] shadow-[#131313]/40 dark:shadow-[#f9f9f9]/40': isHeaderSticky,
             'bg-transparent': !isHeaderSticky
         }">
-        <div class="flex items-center justify-between z-[4]">
+        <div class="grid-container">
+            <div class="flex items-center justify-between z-[4]">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="" class="rounded-full w-14">
             </NuxtLink>
@@ -20,6 +20,7 @@
                     <span :class="{'opacity-0' : isMenuShow}" class="w-full h-0.5 bg-[#131313] dark:bg-[#f9f9f9] rounded-[1px] transition-all ease-linear duration-500"></span>
                     <span :class="{'-rotate-45' : isMenuShow}" class="w-full h-0.5 bg-[#131313] dark:bg-[#f9f9f9] rounded-[1px] origin-[0] transition-all ease-linear duration-500"></span>
                 </button>
+            </div>
             </div>
         </div>
         <div class="fixed col-span-full w-full top-0 left-0 h-screen bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-[#f9f9f9] dark:bg-[#131313] bg-fixed grid-container transition-all duration-500 z-[3]" :class="{'-translate-y-[3000px]' : !isMenuShow}">
@@ -91,43 +92,32 @@ const isHeaderSticky = ref(false)
 const lastScrollY = ref(0)
 const headerRef = ref(null)
 
-// 1. Интеллектуальная обработка скролла
+// 1. Простая логика скролла
 debouncedWatch(
   scrollY,
   (newY) => {
     const scrollDelta = newY - lastScrollY.value
     const scrollingDown = scrollDelta > 0
     
-    // показывать шапку при скролле вверх или в начале страницы
-    if (!scrollingDown || newY < 100) {
-      isHeaderVisible.value = true
-    } 
-    // плавно скрывать при скролле вниз после 100px
-    else if (newY > 100 && Math.abs(scrollDelta) > 10) {
+    // Простая логика: вниз - скрыть, вверх - показать
+    if (scrollingDown && newY > 50) {
       isHeaderVisible.value = false
+    } else if (!scrollingDown) {
+      isHeaderVisible.value = true
     }
     
-    // фиксировать шапку после 100px
-    isHeaderSticky.value = newY > 100
+    // Фиксировать шапку после 50px
+    isHeaderSticky.value = newY > 50
     lastScrollY.value = newY
   },
-  { debounce: 50, maxWait: 100 }
+  { debounce: 100, maxWait: 200 }
 )
 
-// 2. Управление видимостью при фокусе
+// 2. Показ шапки при взаимодействии с навигацией
 const handleInteraction = (e) => {
-  // показывать шапку при взаимодействии с навигацией
+  // Показывать шапку при взаимодействии с навигацией
   if (headerRef.value?.contains(e.target)) {
     isHeaderVisible.value = true
-    return
-  }
-  
-  // скрывать при клике вне шапки (кроме интерактивных элементов)
-  const interactiveTags = ['A', 'BUTTON', 'INPUT', 'LABEL']
-  const isInteractive = interactiveTags.includes(e.target.tagName) || e.target.closest('a, button, input, label, [role="button"]')
-  
-  if (!isInteractive) {
-    isHeaderVisible.value = !isHeaderVisible.value
   }
 }
 
@@ -140,6 +130,9 @@ watch(() => route.path, () => {
 
 // 4. Инициализация обработчиков
 onMounted(() => {
+  // Инициализируем lastScrollY текущим значением скролла
+  lastScrollY.value = scrollY.value
+  
   document.addEventListener('click', handleInteraction)
   window.addEventListener('focusin', () => isHeaderVisible.value = true)
   
