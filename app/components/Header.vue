@@ -1,5 +1,5 @@
 <template>
-    <header class="grid-container w-full">
+    <header class="grid-container w-full fixed z-10">
         <div class="w-full flex items-center justify-between py-4">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">

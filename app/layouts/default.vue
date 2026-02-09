@@ -1,6 +1,6 @@
 <template>
     <Header/>
-    <main class="grid-container gap-y-16 lg:gap-y-20 py-8 md:py-12 lg:py-16">
+    <main class="grid-container gap-y-16 pb-8 md:pb-12 lg:pb-16">
         <NuxtPage/>
     </main>
     <!-- <Footer/>
