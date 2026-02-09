@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    #__nuxt {
+        @apply bg-[#f9f9f9] dark:bg-[#131313] text-[#131313] dark:text-[#f9f9f9] bg-[url(/images/body/bg_white.webp)] dark:bg-[url(/images/body/bg_black.webp)] bg-fixed font-semibold min-h-screen overflow-x-hidden flex flex-col
+    }
+
+    :root{
+        /* макимальная ширина контента */
+        --widthContent:1280px;
+        /* Растояние от границы брузера по бокам */
+        --widthContentMargin:16px;
+    }
+
+    /* Настройка кастомных контейнеров */
+    /* Применение системы гридов для расположения контента в ячейку main или full или в любую другую ячейку между именованными линиями grid*/
+
+    .grid-container{        
+        grid-template-columns: [full-start] minmax(var(--widthContentMargin), 1fr) [main-start] minmax(0, var(--widthContent)) [main-end] minmax(var(--widthContentMargin), 1fr) [full-end];
+        @apply grid
+    }
+
+    .grid-container>*{        
+        @apply col-[main]
+    }    
+
+    .wrapper{ 
+        @apply mx-auto w-[calc(100%-var(--widthContentMargin)*2)] max-w-[var(--widthContent)]
+    }
+
+    .container{        
+        @apply max-w-[var(--widthContent)]
+    }    
+}
+
+@layer utilities {
+    .list-decimal-leading-zero {
+        list-style-type: decimal-leading-zero;
+    }
+    .scrollbar-measure{
+        @apply w-20 h-20 overflow-scroll absolute -top-[9999px] bg-transparent
+    }
+    .link {
+        @apply transition-transform duration-500 hover:scale-110
+    }
+}
+
+.text-vertical {
+    writing-mode: vertical-rl;
+}
+
+:root {  
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+    }
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-150%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(150%);
+    }
+
+}
+
+.animate-text {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--pink),
+        var(--purple),
+        var(--violet),
+        var(--pink)
+    );
+    background-size: 200%;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+.scroll {
+    animation: scroll-down 3s infinite;
+}
