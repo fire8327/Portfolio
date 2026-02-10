@@ -35,14 +35,14 @@
         <div class="flex flex-col gap-6">
             <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">кастомная веб‑разработка</p>
             <div class="flex max-lg:flex-col gap-6 lg:justify-between">
-                <p class="text-xl lg:text-2xl leading-relaxed text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
+                <p class="text-xl lg:text-2xl text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
                     Начните создавать адаптивные сайты вместе со мной и получайте
                     <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
                         быстрые и продуктивные решения
                     </span>, которые идеально подходят под ваши задачи.
                 </p>
                 <div class="flex flex-col gap-4">
-                    <div class="flex items-center gap-2 rounded-full border border-white/10 bg-black/20 dark:bg-white/5 px-4 py-2 text-xs uppercase text-[#f9f9f9]/80">
+                    <div class="w-fit flex items-center gap-2 rounded-full border border-white/10 bg-black/20 dark:bg-white/5 px-4 py-2 text-xs uppercase text-[#f9f9f9]/80">
                         <div class="h-2 w-2 rounded-full shrink-0 bg-emerald-400 animate-pulse"></div>
                         <p>Свободен для новых проектов</p>
                     </div>
