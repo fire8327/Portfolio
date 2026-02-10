@@ -17,7 +17,10 @@
         </div>
     </div>
     <div class="flex flex-col gap-6">
-        <p class="text-xl md:text-2xl lg:text-3xl uppercase">Кейсы</p>
+        <div class="flex flex-col gap-1">
+            <p class="text-xl md:text-2xl lg:text-3xl uppercase">Кейсы</p>
+            <p class="text-xs uppercase tracking-[0.025em] text-[#131313]/50 dark:text-[#f9f9f9]/50">Примеры уже готовых работ</p>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             <Card v-for="site in examples" v-bind="site"/>            
         </div>
@@ -28,26 +31,24 @@
         </NuxtLink>
     </div>
     <CoopOptions/>
-    <div class="py-8 lg:py-10">
-        <div class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-4 lg:px-8 py-8">
-            <div class="flex flex-col gap-6">
-                <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">кастомная веб‑разработка</p>
-                <div class="flex max-lg:flex-col gap-6 lg:justify-between">
-                    <p class="text-xl lg:text-2xl leading-relaxed text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
-                        Начните создавать адаптивные сайты вместе со мной и получайте
-                        <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
-                            быстрые и продуктивные решения
-                        </span>, которые идеально подходят под ваши задачи.
-                    </p>
-                    <div class="flex flex-col gap-4">
-                        <div class="flex items-center gap-2 rounded-full border border-white/10 bg-black/20 dark:bg-white/5 px-4 py-2 text-xs uppercase text-[#f9f9f9]/80">
-                            <div class="h-2 w-2 rounded-full shrink-0 bg-emerald-400 animate-pulse"></div>
-                            <p>Свободен для новых проектов</p>
-                        </div>
-                        <div class="text-sm text-[#f9f9f9]/60">
-                            <p class="text-base font-semibold text-[#f9f9f9]">5–7 дней</p>
-                            <p>средний срок запуска</p>
-                        </div>
+    <div class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-4 lg:px-8 py-8">
+        <div class="flex flex-col gap-6">
+            <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">кастомная веб‑разработка</p>
+            <div class="flex max-lg:flex-col gap-6 lg:justify-between">
+                <p class="text-xl lg:text-2xl leading-relaxed text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
+                    Начните создавать адаптивные сайты вместе со мной и получайте
+                    <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
+                        быстрые и продуктивные решения
+                    </span>, которые идеально подходят под ваши задачи.
+                </p>
+                <div class="flex flex-col gap-4">
+                    <div class="flex items-center gap-2 rounded-full border border-white/10 bg-black/20 dark:bg-white/5 px-4 py-2 text-xs uppercase text-[#f9f9f9]/80">
+                        <div class="h-2 w-2 rounded-full shrink-0 bg-emerald-400 animate-pulse"></div>
+                        <p>Свободен для новых проектов</p>
+                    </div>
+                    <div class="text-sm text-[#f9f9f9]/60">
+                        <p class="text-base font-semibold text-[#f9f9f9]">5–7 дней</p>
+                        <p>средний срок запуска</p>
                     </div>
                 </div>
             </div>
