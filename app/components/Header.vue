@@ -1,5 +1,8 @@
 <template>
-    <header class="grid-container w-full fixed z-[2]">
+    <header
+        class="grid-container w-full fixed z-[2] transition-[background-color,backdrop-filter] duration-500"
+        :class="isScrolled ? 'bg-[#f9f9f9]/90 dark:bg-[#131313]/90 backdrop-blur-md border-b border-[#131313]/20 dark:border-[#f9f9f9]/20' : ''"
+    >
         <div class="w-full flex items-center justify-between py-4">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">
@@ -27,4 +30,21 @@
 <script setup>
 /* мобильное меню */
 const isMenuShow = ref(false)
+
+/* фон шапки при скролле */
+const isScrolled = ref(false)
+const scrollThreshold = 150
+
+function onScroll() {
+    isScrolled.value = window.scrollY > scrollThreshold
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll() // проверка при монтировании (если страница уже проскроллена)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', onScroll)
+})
 </script>
