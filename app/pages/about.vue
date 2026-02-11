@@ -35,25 +35,97 @@
     </div>
     <CoopOptions/>
     <div class="flex max-lg:flex-col gap-8 py-8 lg:py-10 border-y border-white/10">
-  <div class="w-full lg:w-1/3 flex flex-col gap-4">
-    <p class="text-xl md:text-2xl lg:text-3xl max-lg:text-center uppercase">Навыки</p>
-    <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">
-      Коротко о том, в чём я сильнее всего в работе с фронтендом и интерфейсами.
-    </p>
-  </div>
-
-  <div class="w-full lg:w-2/3 flex flex-col gap-4">
-    <div v-for="skill in skills" :key="skill.label" class="flex flex-col gap-1.5">
-      <div class="flex items-center justify-between text-sm">
-        <span class="text-[#131313]/70 dark:text-[#f9f9f9]/70">{{ skill.label }}</span>
-        <span class="text-[#131313]/50 dark:text-[#f9f9f9]/50">{{ skill.value }}%</span>
-      </div>
-      <div class="h-1.5 w-full rounded-full bg-[#efefef] dark:bg-[#191919] overflow-hidden">
-        <div class="h-full rounded-full bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197]" :style="`width: ${skill.value}%`"></div>
-      </div>
+        <div class="w-full lg:w-1/3 flex flex-col gap-4">
+            <p class="text-xl md:text-2xl lg:text-3xl max-lg:text-center uppercase">Навыки</p>
+            <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">
+            Коротко о том, в чём я сильнее всего в работе с фронтендом и интерфейсами.
+            </p>
+        </div>
+        <div class="w-full lg:w-2/3 flex flex-col gap-4">
+            <div v-for="skill in skills" :key="skill.label" class="flex flex-col gap-1.5">
+                <div class="flex items-center justify-between text-sm">
+                    <span class="text-[#131313]/70 dark:text-[#f9f9f9]/70">{{ skill.label }}</span>
+                    <span class="text-[#131313]/50 dark:text-[#f9f9f9]/50">{{ skill.value }}%</span>
+                </div>
+                <div class="h-1.5 w-full rounded-full bg-[#efefef] dark:bg-[#191919] overflow-hidden">
+                    <div class="h-full rounded-full bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197]" :style="`width: ${skill.value}%`"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-col items-center gap-4 text-center">
+            <p class="text-xl md:text-2xl lg:text-3xl uppercase">
+            Делаю макеты живыми
+            </p>
+            <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60 max-w-xl">
+                Я беру ваш дизайн — или помогаю собрать простой и понятный вариант — и аккуратно перевожу его в рабочий, адаптивный сайт.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex flex-col gap-3">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
+                01 · точная верстка по макету
+            </p>
+            <p class="text-base md:text-lg text-[#131313] dark:text-[#f9f9f9]">
+                Аккуратно переношу дизайн в код
+            </p>
+            <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60">
+                Соблюдаю отступы, сетку, типографику и общее ощущение макета, чтобы итоговый сайт выглядел так, как вы задумали.
+            </p>
+            </div>
+
+            <div class="flex flex-col gap-3">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
+                02 · адаптив и скорость
+            </p>
+            <p class="text-base md:text-lg text-[#131313] dark:text-[#f9f9f9]">
+                Всё работает на разных устройствах
+            </p>
+            <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60">
+                Подстраиваю блоки под мобильные, планшеты и десктоп, слежу за весом изображений и скоростью загрузки.
+            </p>
+            </div>
+
+            <div class="flex flex-col gap-3">
+            <p class="text-xs uppercase tracking-[0.2em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
+                03 · лёгкие улучшения
+            </p>
+            <p class="text-base md:text-lg text-[#131313] dark:text-[#f9f9f9]">
+                Добавляю жизнь без перегруза
+            </p>
+            <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60">
+                Предлагаю простые анимации, состояния наведения и мелкие UX‑правки, которые делают использование сайта приятнее.
+            </p>
+            </div>
+        </div>
+    </div> 
+    <div class="flex items-center gap-4 rounded-2xl px-4 lg:px-8 py-8 border border-white/10 bg-white/70 dark:bg-white/[0.04] w-fit mx-auto relative">
+        <div class="w-px h-full bg-gradient-to-b from-[#ff7a18] via-[#af002d] to-[#319197] rounded-full"></div>
+        <div class="flex flex-col gap-3">
+            <p class="text-xs uppercase tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
+            цитата · кредо
+            </p>
+
+            <div class="relative pl-6">
+                <p class="absolute left-0 top-0 text-3xl leading-none text-[#131313]/15 dark:text-[#f9f9f9]/15">“</p>
+                <p class="text-lg lg:text-xl text-[#131313] dark:text-[#f9f9f9] italic">
+                    Мы должны оставаться
+                    <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
+                    мыми
+                    </span>,
+                    а они —
+                    <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
+                    оними
+                    </span>.
+                </p>
+            </div>
+
+            <p class="text-xs text-[#131313]/60 dark:text-[#f9f9f9]/60">
+            — моё небольшое напоминание о том, что нормально быть собой
+            </p>
+        </div>
+    </div>
 </template>
 
 <script setup>
