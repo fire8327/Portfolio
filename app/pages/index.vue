@@ -35,7 +35,7 @@
         <div class="flex flex-col gap-6">
             <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">кастомная веб‑разработка</p>
             <div class="flex max-lg:flex-col gap-6 lg:justify-between">
-                <p class="text-xl lg:text-2xl text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
+                <p class="text-xl text-[#131313] dark:text-[#f9f9f9] max-w-2xl">
                     Начните создавать адаптивные сайты вместе со мной и получайте
                     <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
                         быстрые и продуктивные решения
@@ -46,13 +46,14 @@
                         <div class="h-2 w-2 rounded-full shrink-0 bg-emerald-400 animate-pulse"></div>
                         <p>Свободен для новых проектов</p>
                     </div>
-                    <div class="text-sm text-[#f9f9f9]/60">
+                    <div class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60">
                         <p class="text-base font-semibold text-[#f9f9f9]">5–7 дней</p>
                         <p>средний срок запуска</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full bg-gradient-to-br from-[#ff7a18]/25 via-[#af002d]/15 to-[#319197]/0 blur-3xl opacity-80"></div>
     </div>
     <NewProject/>
 </template>
