@@ -107,8 +107,8 @@
             цитата · кредо
             </p>
 
-            <div class="relative pl-6">
-                <p class="absolute left-0 top-0 text-3xl leading-none text-[#131313]/15 dark:text-[#f9f9f9]/15">“</p>
+            <div class="relative flex gap-2">
+                <p class="text-3xl leading-none text-[#131313]/15 dark:text-[#f9f9f9]/15">“</p>
                 <p class="text-lg lg:text-xl text-[#131313] dark:text-[#f9f9f9] italic">
                     Мы должны оставаться
                     <span class="text-transparent bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197] bg-clip-text">
@@ -119,6 +119,7 @@
                     оними
                     </span>.
                 </p>
+                <p class="text-3xl leading-none text-[#131313]/15 dark:text-[#f9f9f9]/15">“</p>
             </div>
 
             <p class="text-xs text-[#131313]/60 dark:text-[#f9f9f9]/60">
@@ -126,6 +127,7 @@
             </p>
         </div>
     </div>
+
 </template>
 
 <script setup>
