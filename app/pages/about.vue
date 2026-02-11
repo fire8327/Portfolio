@@ -127,7 +127,36 @@
             </p>
         </div>
     </div>
+    <div class="flex flex-col gap-6 items-center py-8 lg:py-10">
+        <p class="text-xl md:text-2xl lg:text-3xl uppercase text-center">
+            Время делать проекты
+        </p>
 
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex items-center gap-4 text-3xl md:text-4xl lg:text-5xl">
+                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                    {{ hours }}
+                </div>
+                <span>:</span>
+                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                    {{ minutes }}
+                </div>
+                <span>:</span>
+                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                    {{ seconds }}
+                </div>
+            </div>
+            <p class="text-sm md:text-base text-[#131313]/60 dark:text-[#f9f9f9]/60 text-center">
+            {{ date.toLocaleDateString("ru" ,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) }}
+            </p>
+        </div>
+
+        <NuxtLink to="/feedback" class="flex items-center self-end gap-4 w-fit rounded-full relative p-2 group">
+            <Icon name="material-symbols:arrow-forward-ios-rounded" class="text-lg z-10 dark:text-[#131313] text-[#f9f9f9]"/>
+            <span class="uppercase text-sm tracking-widest z-10 transition-colors duration-500 group-hover:dark:text-[#131313] group-hover:text-[#f9f9f9]">Начать проект</span>
+            <span class="absolute rounded-full dark:bg-[#f9f9f9] bg-[#131313] h-full w-9 z-0 left-0 top-0 transition-all duration-500 group-hover:w-full"></span>
+        </NuxtLink>
+</div>
 </template>
 
 <script setup>
@@ -139,4 +168,12 @@ const skills = [
   { label: 'Vue, Nuxt', value: 70 },
   { label: 'Дизайнерское мышление', value: 60 }
 ]
+
+let date = ref(new Date())
+    const hours = computed(() => {return date.value.getHours()})
+    const minutes = computed(() => {return date.value.getMinutes()})
+    const seconds = computed(() => {return date.value.getSeconds()})    
+    setInterval(() => {
+        date.value = new Date()
+    }, 1000);
 </script>
