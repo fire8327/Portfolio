@@ -169,11 +169,15 @@ const skills = [
   { label: 'Дизайнерское мышление', value: 60 }
 ]
 
-let date = ref(new Date())
-    const hours = computed(() => {return date.value.getHours()})
-    const minutes = computed(() => {return date.value.getMinutes()})
-    const seconds = computed(() => {return date.value.getSeconds()})    
-    setInterval(() => {
-        date.value = new Date()
-    }, 1000);
+const date = ref(new Date());
+
+const hours = computed(() => String(date.value.getHours()).padStart(2, '0'));
+const minutes = computed(() => String(date.value.getMinutes()).padStart(2, '0'));
+const seconds = computed(() => String(date.value.getSeconds()).padStart(2, '0'));
+
+onMounted(() => {
+setInterval(() => {
+    date.value = new Date()
+}, 1000)
+})
 </script>
