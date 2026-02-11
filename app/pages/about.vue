@@ -33,8 +33,36 @@
             <div class="pointer-events-none absolute -right-20 -top-24 h-56 w-56 rounded-full bg-gradient-to-br from-[#ff7a18]/25 via-[#af002d]/15 to-[#319197]/0 blur-3xl opacity-80"></div>
         </div>
     </div>
+    <CoopOptions/>
+    <div class="flex max-lg:flex-col gap-8 py-8 lg:py-10 border-y border-white/10">
+  <div class="w-full lg:w-1/3 flex flex-col gap-4">
+    <p class="text-xl md:text-2xl lg:text-3xl max-lg:text-center uppercase">Навыки</p>
+    <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">
+      Коротко о том, в чём я сильнее всего в работе с фронтендом и интерфейсами.
+    </p>
+  </div>
+
+  <div class="w-full lg:w-2/3 flex flex-col gap-4">
+    <div v-for="skill in skills" :key="skill.label" class="flex flex-col gap-1.5">
+      <div class="flex items-center justify-between text-sm">
+        <span class="text-[#131313]/70 dark:text-[#f9f9f9]/70">{{ skill.label }}</span>
+        <span class="text-[#131313]/50 dark:text-[#f9f9f9]/50">{{ skill.value }}%</span>
+      </div>
+      <div class="h-1.5 w-full rounded-full bg-[#efefef] dark:bg-[#191919] overflow-hidden">
+        <div class="h-full rounded-full bg-gradient-to-r from-[#ff7a18] via-[#af002d] to-[#319197]" :style="`width: ${skill.value}%`"></div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script setup>
-
+const skills = [
+  { label: 'HTML', value: 98 },
+  { label: 'CSS', value: 95 },
+  { label: 'TailwindCSS', value: 85 },
+  { label: 'JS, jQuery', value: 80 },
+  { label: 'Vue, Nuxt', value: 70 },
+  { label: 'Дизайнерское мышление', value: 60 }
+]
 </script>
