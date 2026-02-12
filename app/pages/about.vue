@@ -58,7 +58,7 @@
             <p class="text-xl md:text-2xl lg:text-3xl uppercase">
             Делаю макеты живыми
             </p>
-            <p class="text-sm text-[#131313]/60 dark:text-[#f9f9f9]/60 max-w-xl">
+            <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50 max-w-2xl">
                 Я беру ваш дизайн — или помогаю собрать простой и понятный вариант — и аккуратно перевожу его в рабочий, адаптивный сайт.
             </p>
         </div>
