@@ -8,7 +8,7 @@
             <Card v-for="site in examples" v-bind="site"/>            
         </div>
     </div>
-    <div class="flex flex-col gap-6 py-8 lg:py-10 border-y border-black/10 dark:border-white/10 mt-24 lg:mt-32">
+    <div class="flex flex-col gap-6 py-8 lg:py-10 border-y border-black/10 dark:border-white/10">
         <div>
             <p class="text-xl md:text-2xl lg:text-3xl uppercase">План выполнения работ</p>
             <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
