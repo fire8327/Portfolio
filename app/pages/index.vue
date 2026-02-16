@@ -2,7 +2,7 @@
      <div class="flex flex-col justify-center min-h-screen bg-cover bg-[url(/images/hero/main.webp)] w-full col-span-full bg-center relative bg-fixed">
         <div class="wrapper flex flex-col gap-8 md:gap-12 lg:gap-16 z-[1] text-[#f9f9f9] text-2xl md:text-3xl lg:text-4xl">
             <p>Привет!</p>
-            <p class="text-5xl md:text-6xl lg:text-7xl">Я — Веб-разработчик</p>
+            <p class="text-5xl md:text-6xl lg:text-7xl">Я — <span>{{ typedText }}</span></p>
             <p>Перевоплощаю идеи в код.</p>
         </div>
         <div class="absolute bg-[#131313] bg-opacity-30 inset-0 z-0"></div>
@@ -98,4 +98,51 @@ const examples = [
     "tags": ["Mobile First", "PWA", "Online Menu"]
   },
 ]
+
+/* простой эффект набора текста */
+const titles = ['Веб-разработчик', 'Пишу код', 'Человек, который ест кофе', 'Оживляю макеты', 'Дружу с JavaScript', 'Делаю адаптивно', 'Гуглю ошибки быстрее других']
+
+const typedText = ref('')
+const currentTitleIndex = ref(0)
+const currentCharIndex = ref(0)
+const isDeleting = ref(false)
+let timer = null
+
+const runTyping = () => {
+  const currentTitle = titles[currentTitleIndex.value]
+
+  if (!isDeleting.value) {
+    // печатаем
+    typedText.value = currentTitle.slice(0, currentCharIndex.value + 1)
+    currentCharIndex.value++
+
+    if (currentCharIndex.value === currentTitle.length) {
+      // пауза в конце слова
+      timer = setTimeout(() => {
+        isDeleting.value = true
+        runTyping()
+      }, 1000)
+      return
+    }
+  } else {
+    // стираем
+    typedText.value = currentTitle.slice(0, currentCharIndex.value - 1)
+    currentCharIndex.value--
+
+    if (currentCharIndex.value === 0) {
+      isDeleting.value = false
+      currentTitleIndex.value = (currentTitleIndex.value + 1) % titles.length
+    }
+  }
+
+  timer = setTimeout(runTyping, isDeleting.value ? 80 : 200)
+}
+
+onMounted(() => {
+  runTyping()
+})
+
+onUnmounted(() => {
+  if (timer) clearTimeout(timer)
+})
 </script>
