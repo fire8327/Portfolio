@@ -145,4 +145,24 @@ onMounted(() => {
 onUnmounted(() => {
   if (timer) clearTimeout(timer)
 })
+
+
+/* получение данных */
+const supabase = useSupabaseClient()
+const cases = ref()
+
+const loadCases = async () => {
+  const { data, error } = await supabase
+  .from('cases')
+  .select('*')
+
+  if (data) {
+    cases.value = data
+    console.log(data)    
+  } else {
+    console.log(error)    
+  }
+}
+
+onMounted(loadCases)
 </script>
