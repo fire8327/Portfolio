@@ -1,13 +1,13 @@
 <template>
     <header
-        class="grid-container w-full fixed z-[2] transition-[background-color,backdrop-filter] duration-500"
-        :class="isScrolled ? 'bg-[#f9f9f9]/90 dark:bg-[#131313]/90 backdrop-blur-md border-b border-[#131313]/20 dark:border-[#f9f9f9]/20' : ''"
+        class="grid-container w-full fixed z-[2] transition-all duration-500 max-lg:bg-[#f9f9f9] max-lg:dark:bg-[#131313] max-lg:bg-[url(/images/body/bg_white.webp)] max-lg:dark:bg-[url(/images/body/bg_black.webp)] max-lg:border-b"
+        :class="isScrolled ? 'lg:bg-[#f9f9f9]/90 lg:dark:bg-[#131313]/90 lg:backdrop-blur-md lg:border-b' : ''"
     >
         <div class="w-full flex items-center justify-between py-4">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">
             </NuxtLink>
-            <div class="flex items-center gap-6 text-base max-lg:hidden">
+            <div class="flex items-center gap-6 text-base transition-all duration-500 z-[2] max-lg:bg-[url(/images/body/bg_white.webp)] max-lg:dark:bg-[url(/images/body/bg_black.webp)] max-lg:absolute max-lg:w-full max-lg:left-0 max-lg:flex-col max-lg:py-6 max-lg:bg-[#f9f9f9] max-lg:dark:bg-[#131313]" :class="isMenuShow ? 'max-lg:top-[calc(100%+1px)]' : 'max-lg:top-0 max-lg:-translate-y-full'">
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Главная</NuxtLink>
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Кейсы</NuxtLink>
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Обо мне</NuxtLink>
