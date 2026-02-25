@@ -4,8 +4,8 @@
             <p class="text-xl md:text-2xl lg:text-3xl uppercase">Профессиональное творчество</p>
             <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">Мои работы - ваше впечатление</p>        
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-            <Card v-for="site in examples" v-bind="site"/>            
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 gap-x-4 gap-y-8">
+            <Card v-for="site in cases" v-bind="site"/>            
         </div>
     </div>
     <div class="flex flex-col gap-6 py-8 lg:py-10 border-y border-black/10 dark:border-white/10">
@@ -74,43 +74,23 @@ const steps = [
 ]
 
 
-/* кейсы */
-const examples = [
-  {
-    "title": "Корпоративный сайт для TechFlow",
-    "link": "https://techflow-example.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["Nuxt 3", "Vue.js", "Tailwind CSS", "Адаптивная верстка"]
-  },
-  {
-    "title": "Интернет-магазин FreshMarket",
-    "link": "https://freshmarket-store.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["Vue 3", "Pinia", "REST API", "UI/UX Design"]
-  },
-  {
-    "title": "Лендинг для студии дизайна ArtVision",
-    "link": "https://artvision-landing.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["SSG", "GSAP анимации", "Figma to Code"]
-  },
-  {
-    "title": "Админ-панель AnalyticsPro",
-    "link": "https://analyticspro-dashboard.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["Vue.js", "Chart.js", "JWT Auth", "PostgreSQL"]
-  },
-  {
-    "title": "Портфолио фотографа",
-    "link": "https://photo-portfolio-example.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["Nuxt 3", "Lightbox Gallery", "SEO оптимизация"]
-  },
-  {
-    "title": "Сайт для кофейни Brew&Bean",
-    "link": "https://brewbean-cafe.com",
-    "img": "https://img.freepik.com/free-photo/beautiful-landscape-mother-nature_23-2148992406.jpg?t=st=1770759405~exp=1770763005~hmac=37a67a207025abf33291bb9b80ba881e233de784a213394839a17103d77313f8&w=1060",
-    "tags": ["Mobile First", "PWA", "Online Menu"]
-  },
-]
+/* получение данных */
+const supabase = useSupabaseClient()
+const cases = ref()
+
+const loadCases = async () => {
+  const { data, error } = await supabase
+  .from('cases')
+  .select('*')
+  .order('id', {ascending: true})
+
+  if (data) {
+    cases.value = data
+    console.log(data)    
+  } else {
+    console.log(error)    
+  }
+}
+
+onMounted(loadCases)
 </script>
