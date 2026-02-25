@@ -95,7 +95,7 @@ const runTyping = () => {
     }
   }
 
-  timer = setTimeout(runTyping, isDeleting.value ? 80 : 200)
+  timer = setTimeout(runTyping, isDeleting.value ? 50 : 90)
 }
 
 onMounted(() => {
