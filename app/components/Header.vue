@@ -3,7 +3,7 @@
         class="grid-container w-full fixed z-[2] transition-all duration-500 max-lg:bg-[#f9f9f9] max-lg:dark:bg-[#131313] max-lg:bg-[url(/images/body/bg_white.webp)] max-lg:dark:bg-[url(/images/body/bg_black.webp)] max-lg:border-b"
         :class="isScrolled ? 'lg:bg-[#f9f9f9]/90 lg:dark:bg-[#131313]/90 lg:backdrop-blur-md lg:border-b' : ''"
     >
-        <div class="w-full flex items-center justify-between py-4">
+        <div class="w-full flex items-center justify-between py-2 lg:py-4">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">
             </NuxtLink>
