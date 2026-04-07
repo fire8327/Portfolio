@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  // класс `dark` на <html> от @nuxtjs/color-mode; без этого Tailwind использует prefers-color-scheme
+  darkMode: 'class',
   content: [
     './app/components/**/*.{js,vue,ts}',
     './app/layouts/**/*.vue',

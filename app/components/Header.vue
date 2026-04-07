@@ -3,7 +3,7 @@
         class="grid-container w-full fixed z-[2] transition-all duration-500 max-lg:bg-[#f9f9f9] max-lg:dark:bg-[#131313] max-lg:bg-[url(/images/body/bg_white.webp)] max-lg:dark:bg-[url(/images/body/bg_black.webp)] max-lg:border-b"
         :class="isScrolled ? 'lg:bg-[#f9f9f9]/90 lg:dark:bg-[#131313]/90 lg:backdrop-blur-md lg:border-b' : ''"
     >
-        <div class="w-full flex items-center justify-between py-2 lg:py-4">
+        <div class="w-full flex items-center justify-between py-2 lg:py-4 dark:text-[#f9f9f9]" :class="isScrolled ? 'text-[#131313]' : 'text-[#f9f9f9]'">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">
             </NuxtLink>
@@ -15,10 +15,18 @@
                 <button class="lg:hidden px-4 py-1.5 rounded-lg bg-[#f9f9f9] text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
             </div>
             <div class="flex items-center gap-4">
+                <button
+                    type="button"
+                    class="flex cursor-pointer transition-all duration-500 hover:opacity-80 active:opacity-50"
+                    aria-label="Переключить светлую и тёмную тему"
+                    @click="toggleColorMode"
+                >
+                    <Icon class="text-4xl" :name="colorMode.preference === 'dark' ? 'material-symbols:clear-day-rounded' : 'material-symbols:dark-mode-outline'"/>
+                </button>
                 <a href="http://" target="_blank" rel="noopener noreferrer" class="flex transition-all duration-500 hover:opacity-80 active:opacity-50">
                     <Icon class="text-4xl" name="logos:telegram"/>
                 </a>
-                <button class="max-lg:hidden px-4 py-1.5 rounded-lg bg-[#f9f9f9] text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
+                <button class="max-lg:hidden px-4 py-1.5 rounded-lg bg-[#131313] dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
                 <button @click="isMenuShow = !isMenuShow" class="cursor-pointer flex lg:hidden">
                     <Icon class="text-4xl" name="iconamoon:menu-burger-horizontal-light"/>
                 </button>
@@ -28,6 +36,12 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode()
+
+function toggleColorMode() {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
 /* мобильное меню */
 const isMenuShow = ref(false)
 
