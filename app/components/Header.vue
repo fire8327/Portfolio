@@ -23,7 +23,7 @@
                 >
                     <Icon class="text-4xl" :name="colorMode.preference === 'dark' ? 'material-symbols:clear-day-rounded' : 'material-symbols:dark-mode-outline'"/>
                 </button>
-                <a href="http://" target="_blank" rel="noopener noreferrer" class="flex transition-all duration-500 hover:opacity-80 active:opacity-50">
+                <a href="https://t.me/fire83274" target="_blank" rel="noopener noreferrer" class="flex transition-all duration-500 hover:opacity-80 active:opacity-50">
                     <Icon class="text-4xl" name="logos:telegram"/>
                 </a>
                 <button class="max-lg:hidden px-4 py-1.5 rounded-lg bg-[#131313] dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
