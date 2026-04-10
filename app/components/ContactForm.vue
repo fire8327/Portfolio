@@ -33,21 +33,21 @@
           </button>
         </div>
 
-        <form class="flex flex-col gap-3">
+        <form class="flex flex-col gap-3 text-[#131313] dark:text-[#f9f9f9]">
           <input
             type="text"
             placeholder="Ваше имя"
-            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none transition-all duration-300 focus:border-[#af002d]/60"
+            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none transition-all duration-300 focus:border-[#af002d]/60 dark:focus:border-[#af002d]/60"
           >
           <input
             type="text"
             placeholder="Telegram"
-            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none transition-all duration-300 focus:border-[#af002d]/60"
+            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none transition-all duration-300 focus:border-[#af002d]/60 dark:focus:border-[#af002d]/60"
           >
           <textarea
             rows="5"
             placeholder="Коротко опишите задачу"
-            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none resize-none transition-all duration-300 focus:border-[#af002d]/60"
+            class="rounded-xl border border-black/10 dark:border-white/10 bg-white/60 dark:bg-white/[0.03] px-4 py-3 outline-none resize-none transition-all duration-300 focus:border-[#af002d]/60 dark:focus:border-[#af002d]/60"
           ></textarea>
 
           <!-- поменять -->
