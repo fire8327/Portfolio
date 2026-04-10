@@ -34,7 +34,7 @@
         </div>
     </div>
     <CoopOptions/>
-    <div class="flex max-lg:flex-col gap-8 py-8 lg:py-10 border-y border-white/10">
+    <div class="flex max-lg:flex-col gap-8 py-8 lg:py-10 border-y border-black/10 dark:border-white/10">
         <div class="w-full lg:w-1/3 flex flex-col gap-4">
             <p class="text-xl md:text-2xl lg:text-3xl max-lg:text-center uppercase">Навыки</p>
             <p class="text-lg text-[#131313]/60 dark:text-[#f9f9f9]/60 max-lg:text-center">
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div> 
-    <div class="flex items-center gap-4 rounded-2xl px-4 lg:px-8 py-8 border border-white/10 bg-white/70 dark:bg-white/[0.04] w-fit mx-auto relative">
+    <div class="flex items-center gap-4 rounded-2xl px-4 lg:px-8 py-8 border border-black/10 dark:border-white/10 bg-white/70 dark:bg-white/[0.04] w-fit mx-auto relative">
         <div class="w-px h-full bg-gradient-to-b from-[#ff7a18] via-[#af002d] to-[#319197] rounded-full"></div>
         <div class="flex flex-col gap-3">
             <p class="text-xs uppercase tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">
@@ -134,15 +134,15 @@
 
         <div class="flex flex-col items-center gap-4">
             <div class="flex items-center gap-4 text-3xl md:text-4xl lg:text-5xl">
-                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                <div class="flex items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
                     {{ hours }}
                 </div>
                 <span>:</span>
-                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                <div class="flex items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
                     {{ minutes }}
                 </div>
                 <span>:</span>
-                <div class="flex items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
+                <div class="flex items-center justify-center rounded-xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-5 py-2 min-w-[4.5rem]">
                     {{ seconds }}
                 </div>
             </div>

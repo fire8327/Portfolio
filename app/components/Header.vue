@@ -3,7 +3,7 @@
         class="grid-container w-full fixed z-[2] transition-all duration-500 max-lg:bg-[#f9f9f9] max-lg:dark:bg-[#131313] max-lg:bg-[url(/images/body/bg_white.webp)] max-lg:dark:bg-[url(/images/body/bg_black.webp)] max-lg:border-b"
         :class="isScrolled ? 'lg:bg-[#f9f9f9]/90 lg:dark:bg-[#131313]/90 lg:backdrop-blur-md lg:border-b' : ''"
     >
-        <div class="w-full flex items-center justify-between py-2 lg:py-4 dark:text-[#f9f9f9]" :class="isScrolled ? 'text-[#131313]' : 'text-[#f9f9f9]'">
+        <div class="w-full flex items-center justify-between py-2 lg:py-4" :class="headerTextClass">
             <NuxtLink to="/">
                 <img src="/images/header/logo.webp" alt="Logo" class="w-14 rounded-full">
             </NuxtLink>
@@ -11,7 +11,7 @@
                 <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Главная</NuxtLink>
                 <NuxtLink to="/portfolio" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Кейсы</NuxtLink>
                 <NuxtLink to="/about" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Обо мне</NuxtLink>
-                <NuxtLink to="/" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Контакты</NuxtLink>
+                <NuxtLink to="/contacts" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Контакты</NuxtLink>
                 <button class="lg:hidden px-4 py-1.5 rounded-lg bg-[#f9f9f9] text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
             </div>
             <div class="flex items-center gap-4">
@@ -37,6 +37,7 @@
 
 <script setup>
 const colorMode = useColorMode()
+const route = useRoute()
 
 function toggleColorMode() {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
@@ -48,6 +49,14 @@ const isMenuShow = ref(false)
 /* фон шапки при скролле */
 const isScrolled = ref(false)
 const scrollThreshold = 150
+
+const headerTextClass = computed(() => {
+    if (route.path === '/') {
+        return isScrolled.value ? 'text-[#131313] dark:text-[#f9f9f9]' : 'text-[#f9f9f9]'
+    }
+
+    return 'text-[#131313] dark:text-[#f9f9f9]'
+})
 
 function onScroll() {
     isScrolled.value = window.scrollY > scrollThreshold

@@ -31,7 +31,7 @@
         </NuxtLink>
     </div>
     <CoopOptions/>
-    <div class="relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-4 lg:px-8 py-8">
+    <div class="relative overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/5 via-black/0 to-black/20 dark:from-white/5 dark:via-white/0 dark:to-white/10 px-4 lg:px-8 py-8">
         <div class="flex flex-col gap-6">
             <p class="uppercase text-xs tracking-[0.25em] text-[#131313]/50 dark:text-[#f9f9f9]/50">кастомная веб‑разработка</p>
             <div class="flex max-lg:flex-col gap-6 lg:justify-between">
