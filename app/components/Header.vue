@@ -12,8 +12,8 @@
                 <NuxtLink to="/portfolio" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Кейсы</NuxtLink>
                 <NuxtLink to="/about" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Обо мне</NuxtLink>
                 <NuxtLink to="/contacts" class="flex flex-col after:w-0 after:h-px after:bg-[#f9f9f9] after:transition-all after:duration-500 hover:after:w-full">Контакты</NuxtLink>
-                <button class="lg:hidden px-4 py-1.5 rounded-lg bg-[#f9f9f9] text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
-            </div>
+<!--                 <button class="lg:hidden px-4 py-1.5 rounded-lg bg-[#f9f9f9] text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
+ -->            </div>
             <div class="flex items-center gap-4">
                 <button
                     type="button"
@@ -26,8 +26,8 @@
                 <a href="https://t.me/fire83274" target="_blank" rel="noopener noreferrer" class="flex transition-all duration-500 hover:opacity-80 active:opacity-50">
                     <Icon class="text-4xl" name="logos:telegram"/>
                 </a>
-                <button class="max-lg:hidden px-4 py-1.5 rounded-lg bg-[#131313] dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
-                <button @click="isMenuShow = !isMenuShow" class="cursor-pointer flex lg:hidden">
+<!--                 <button class="max-lg:hidden px-4 py-1.5 rounded-lg bg-[#131313] dark:bg-[#f9f9f9] text-[#f9f9f9] dark:text-[#131313] font-medium transition-all duration-500 hover:opacity-80 active:opacity-50">Обсудить проект</button>
+ -->                <button @click="isMenuShow = !isMenuShow" class="cursor-pointer flex lg:hidden">
                     <Icon class="text-4xl" name="iconamoon:menu-burger-horizontal-light"/>
                 </button>
             </div>
