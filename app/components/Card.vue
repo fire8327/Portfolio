@@ -1,7 +1,7 @@
 <template>
     <NuxtLink :to="link" target="_blank" class="group flex flex-col gap-3">
         <div class="overflow-hidden rounded-xl border border-black/10 dark:border-white/10">
-            <img :src="`https://vsjysngqgkyuwdztvfhm.supabase.co/storage/v1/object/public/images/cases/${image}`" alt="" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-[1.02]"/>
+            <img :src="`/images/cases/${image}`" alt="" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-[1.02]"/>
         </div>
         <div class="flex flex-wrap items-center gap-2">
             <span v-for="tag in tags" class="px-3 py-1.5 text-xs uppercase tracking-wider rounded-full bg-[#131313]/8 dark:bg-[#f9f9f9]/8 text-[#131313]/70 dark:text-[#f9f9f9]/70 border border-[#131313]/10 dark:border-[#f9f9f9]/10">{{ tag }}</span>
