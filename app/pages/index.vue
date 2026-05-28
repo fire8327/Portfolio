@@ -109,22 +109,56 @@ onUnmounted(() => {
 
 /* получение данных */
 const supabase = useSupabaseClient()
-const cases = ref()
-
-const loadCases = async () => {
-  const { data, error } = await supabase
-  .from('cases')
-  .select('*')
-  .range(0, 5)
-  .order('id', {ascending: true})
-
-  if (data) {
-    cases.value = data
-    console.log(data)    
-  } else {
-    console.log(error)    
+const cases = ref(
+  [
+  {
+    "id": 1,
+    "created_at": "2026-02-18 18:17:11.037089+00",
+    "desc": "Сайт ИИ помощника",
+    "image": "ai.webp",
+    "link": "https://ai83274.vercel.app/",
+    "tags": ["Rest API", "Nuxt 3", "ru"]
+  },
+  {
+    "id": 3,
+    "created_at": "2026-02-25 09:45:43.523167+00",
+    "desc": "UI-кит для ИнформТехники",
+    "image": "informtechnika.webp",
+    "link": "https://www.minicom.ru/",
+    "tags": ["UI", "Vue 3", "ru"]
+  },
+  {
+    "id": 4,
+    "created_at": "2026-02-25 09:45:43.523167+00",
+    "desc": "Концепт веб-банка",
+    "image": "webbank.webp",
+    "link": "https://fire8327.github.io/WebBank/index.html",
+    "tags": ["UI/UX", "Mobile First", "ru"]
+  },
+  {
+    "id": 5,
+    "created_at": "2026-02-25 09:45:43.523167+00",
+    "desc": "Лендинг для мобильного приложения EQVI",
+    "image": "eqvilibria.webp",
+    "link": "https://eqvilibria.com/",
+    "tags": ["Landing", "Tailwind", "en"]
+  },
+  {
+    "id": 10,
+    "created_at": "2026-02-25 09:45:43.523167+00",
+    "desc": "UI-кит для сервиса здоровья",
+    "image": "onhes.webp",
+    "link": "https://fire8327.github.io/DesignSchool/",
+    "tags": ["UI", "Tailwind", "ru"]
+  },
+  {
+    "id": 11,
+    "created_at": "2026-02-25 09:45:43.523167+00",
+    "desc": "Сайт медиа о чайной культуре",
+    "image": "proliv.webp",
+    "link": "https://fire8327.github.io/Proliv/index.html",
+    "tags": ["HTML", "Tailwind", "ru"]
   }
-}
-
-onMounted(loadCases)
+]
+)
 </script>

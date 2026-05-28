@@ -75,22 +75,144 @@ const steps = [
 
 
 /* получение данных */
-const supabase = useSupabaseClient()
-const cases = ref()
-
-const loadCases = async () => {
-  const { data, error } = await supabase
-  .from('cases')
-  .select('*')
-  .order('id', {ascending: true})
-
-  if (data) {
-    cases.value = data
-    console.log(data)    
-  } else {
-    console.log(error)    
-  }
-}
-
-onMounted(loadCases)
+const cases = ref(
+  [
+    {
+      "id": 1,
+      "created_at": "2026-02-18 18:17:11.037089+00",
+      "desc": "Сайт ИИ помощника",
+      "image": "ai.webp",
+      "link": "https://ai83274.vercel.app/",
+      "tags": ["Rest API", "Nuxt 3", "ru"]
+    },
+    {
+      "id": 2,
+      "created_at": "2026-02-18 18:17:21.231303+00",
+      "desc": "Маркетплейс товаров California",
+      "image": "california.webp",
+      "link": "https://fire8327.github.io/California/",
+      "tags": ["Landing", "Mobile first", "en"]
+    },
+    {
+      "id": 3,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "UI-кит для ИнформТехники",
+      "image": "informtechnika.webp",
+      "link": "https://www.minicom.ru/",
+      "tags": ["UI", "Vue 3", "ru"]
+    },
+    {
+      "id": 4,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Концепт веб-банка",
+      "image": "webbank.webp",
+      "link": "https://fire8327.github.io/WebBank/index.html",
+      "tags": ["UI/UX", "Mobile First", "ru"]
+    },
+    {
+      "id": 5,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Лендинг для мобильного приложения EQVI",
+      "image": "eqvilibria.webp",
+      "link": "https://eqvilibria.com/",
+      "tags": ["Landing", "Tailwind", "en"]
+    },
+    {
+      "id": 6,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Концепт студии фотографии Aperture",
+      "image": "aperture.webp",
+      "link": "https://fire8327.github.io/Aperture/",
+      "tags": ["Landing", "en"]
+    },
+    {
+      "id": 7,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Сайт для консалтинговой компании Akocheck",
+      "image": "akocheck.webp",
+      "link": "https://akocheck.ru/",
+      "tags": ["UI/UX", "Tailwind", "ru"]
+    },
+    {
+      "id": 8,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Академия альтернативного образования",
+      "image": "elenasouly.webp",
+      "link": "https://fire8327.github.io/ElenaSouly/",
+      "tags": ["Tailwind", "ru"]
+    },
+    {
+      "id": 9,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Профильная онлайн-школа дизайна",
+      "image": "designschool.webp",
+      "link": "https://fire8327.github.io/DesignSchool/",
+      "tags": ["Landing", "HTML", "ru"]
+    },
+    {
+      "id": 10,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "UI-кит для сервиса здоровья",
+      "image": "onhes.webp",
+      "link": "https://fire8327.github.io/DesignSchool/",
+      "tags": ["UI", "Tailwind", "ru"]
+    },
+    {
+      "id": 11,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Сайт медиа о чайной культуре",
+      "image": "proliv.webp",
+      "link": "https://fire8327.github.io/Proliv/index.html",
+      "tags": ["HTML", "Tailwind", "ru"]
+    },
+    {
+      "id": 12,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Лендинг для КП «Крёкшино Вилладж»",
+      "image": "village.webp",
+      "link": "https://fire8327.github.io/Village/",
+      "tags": ["Landing", "ru"]
+    },
+    {
+      "id": 13,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Сайт для RSNBIM",
+      "image": "rsnbim.webp",
+      "link": "https://rsnbim.ru/",
+      "tags": ["Vue 3", "Nuxt 3", "ru"]
+    },
+    {
+      "id": 14,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Инновационное книжное издательство",
+      "image": "worldwords.webp",
+      "link": "https://worldwords.io/ru",
+      "tags": ["React", "Rest Api", "ru"]
+    },
+    {
+      "id": 15,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Студенческий проект в содействии с федеральным проектом",
+      "image": "eco.webp",
+      "link": "https://fire8327.github.io/EcoLanding/",
+      "tags": ["Landing", "Tailwind", "ru"]
+    },
+    {
+      "id": 16,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Лендин для мусороперерабатывающей компании",
+      "image": "ecostar.webp",
+      "link": "https://ecostar-pro.ru/",
+      "tags": ["Landing", "Telegram API", "ru"]
+    },
+    {
+      "id": 17,
+      "created_at": "2026-02-25 09:45:43.523167+00",
+      "desc": "Лендинг для шароварни",
+      "image": "brusco.webp",
+      "link": "https://bruskoshar.ru/",
+      "tags": ["Landing", "HTML", "ru"]
+    }
+  ]
+)
 </script>
