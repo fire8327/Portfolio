@@ -52,7 +52,7 @@ const scrollThreshold = 150
 
 const headerTextClass = computed(() => {
     if (route.path === '/') {
-        return isScrolled.value ? 'text-[#131313] dark:text-[#f9f9f9]' : 'text-[#f9f9f9]'
+        return isScrolled.value ? 'text-[#131313] dark:text-[#f9f9f9]' : 'lg:text-[#f9f9f9]'
     }
 
     return 'text-[#131313] dark:text-[#f9f9f9]'

@@ -3,6 +3,6 @@
         <div class="w-px h-10 bg-[#131313] overflow-hidden">
             <div class="w-full transition-all h-full bg-[#f9f9f9] scroll"></div>
         </div>
-        <p class="text-sm text-vertical tracking-[0.4em] uppercase">scroll</p>
+        <p class="text-sm text-vertical tracking-[0.4em] uppercase text-[#f9f9f9]">scroll</p>
     </div>
 </template>
