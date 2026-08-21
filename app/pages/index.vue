@@ -111,14 +111,14 @@ onUnmounted(() => {
 const supabase = useSupabaseClient()
 const cases = ref(
   [
-  {
+  /*{ 
     "id": 1,
     "created_at": "2026-02-18 18:17:11.037089+00",
     "desc": "Сайт ИИ помощника",
     "image": "ai.webp",
     "link": "https://ai83274.vercel.app/",
     "tags": ["Rest API", "Nuxt 3", "ru"]
-  },
+  }, */
   {
     "id": 3,
     "created_at": "2026-02-25 09:45:43.523167+00",
